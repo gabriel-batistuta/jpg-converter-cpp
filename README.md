@@ -21,6 +21,7 @@ g++ -o image_converter main.cpp lodepng.cpp -ljpeg
 ```
 
 # Result
+<link rel="stylesheet" type="text/css" href="assets/styles.css">
 <div style="display: flex; justify-content: space-between;">
     <div class="image-container">
         <img src="assets/input.jpg" alt="input.jpg" style="width: 40vw;"/>
@@ -35,57 +36,3 @@ g++ -o image_converter main.cpp lodepng.cpp -ljpeg
     <img src="assets/difference.png" alt="output.jpg" style="width: 50%; height: 50%;"/>
     <p class="minor_caption">image differencies</p>
 </div>
-
-<style>
-.image-container {
-  position: relative;
-}
-
-.minor_caption {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: calc(100% / 2);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-.minor_caption::before,
-.minor_caption::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
-
-.minor_caption::before {
-    right: 100%;
-    margin-top: -10px;
-    border-width: 10px;
-    border-color: transparent transparent transparent rgba(0, 0, 0, 0.5);
-}
-
-.minor_caption::after {
-    right: calc(100% - 20px);
-    margin-top: -10px;
-    border-width: 10px;
-    border-color: transparent transparent transparent rgba(0, 0, 0, 0);
-}
-
-
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 94%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-</style>
