@@ -21,7 +21,7 @@ g++ -o image_converter main.cpp lodepng.cpp -ljpeg
 ```
 
 # Result
-<link rel="stylesheet" type="text/css" href="assets/styles.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
 <div style="display: flex; justify-content: space-between;">
     <div class="image-container">
         <img src="assets/input.jpg" alt="input.jpg" style="width: 40vw;"/>
