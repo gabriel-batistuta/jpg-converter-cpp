@@ -1,0 +1,85 @@
+.header {
+  text-align: center;
+}
+
+p, h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+code {
+  font-family: Consolas, Monaco, Courier New, Courier, monospace;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  display: block;
+  margin: 14px 0;
+  padding: 12px 10px;
+  width: 50%;
+}
+
+span {
+  color: green;
+}
+
+img {
+  border: 1px solid black;
+  width: 25vw;
+}
+
+.image-container {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 94%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.minor_image {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6px;
+}
+
+.minor_caption {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: calc(100% / 2);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.minor_caption::before,
+.minor_caption::after {
+  content: '';
+  position: absolute;
+  bottom: 100%; /* Alteramos de 'top' para 'bottom' */
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.minor_caption::before {
+  left: 50%; /* Alteramos de 'right' para 'left' */
+  margin-left: -10px; /* Alteramos de 'margin-top' para 'margin-left' */
+  border-width: 10px;
+  border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;
+}
+
+.minor_caption::after {
+  left: calc(50% - 10px); /* Alteramos de 'right' para 'left' */
+  margin-left: -10px; /* Alteramos de 'margin-top' para 'margin-left' */
+  border-width: 10px;
+  border-color: rgba(0, 0, 0, 0) transparent transparent transparent; /* Alteramos a ordem das cores */
+}
